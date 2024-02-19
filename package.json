@@ -1,0 +1,19 @@
+{
+  "name": "hello-autogen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --prefix \" {name} |\" -k -c yellow,green,magenta,cyan,#EDF1FF,#FF8501,#FF80ED,#DB6380 --names \"   Mistral:Ollama\",\"  Mistral:LiteLLM\",\" CodeLlama:Ollama\",\"CodeLlama:LiteLLM\",\"     Llava:Ollama\",\"    Llava:LiteLLM\",\"  Panel:Example 3\",\"  Panel:Example 4\" npm:ollama:mistral npm:litellm:mistral npm:ollama:codellama npm:litellm:codellama npm:ollama:llava npm:litellm:llava npm:panel:example3 npm:panel:example4",
+    "litellm:mistral": "litellm --model ollama/mistral --port 59991 --debug",
+    "litellm:llava": "litellm --model ollama/llava --port 59992 --debug",
+    "litellm:codellama": "litellm --model ollama/codellama --port 59993 --debug",
+    "ollama:mistral": "ollama run mistral",
+    "ollama:llava": "ollama run llava",
+    "ollama:codellama": "ollama run codellama",
+    "panel:example3": "panel serve example-03-chatbot.py --port 5007",
+    "panel:example4": "panel serve example-04-multimodal.py --port 5008"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
