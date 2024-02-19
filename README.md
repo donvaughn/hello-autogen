@@ -32,7 +32,10 @@ __or__
 
 ## Getting Started
 
-`npm start`
+```shell
+$ npm install
+$ npm start
+```
 
 will start:
 
@@ -40,7 +43,9 @@ will start:
 - all LiteLLM openAI proxies for those models
 - all Panel examples:
   - http://localhost:5007/example-03-chatbot
-  - http://localhost:5007/example-03-chatbot
+  - http://localhost:5008/example-04-multimodal
+
+> :warning: **IMPORTANT**: The first run will download 2 LLM models using Ollama - this will consume about 8.8GB and may take several hours depending on your connection -- and may consume your full bandwidth.
 
 Alternatively, you can run each model separately with Ollama & LiteLLM:
 
